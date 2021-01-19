@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DQ BLOG</title>
+  
+  
+  
+  <!--link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/github-gist.min.css"-->
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/github-gist.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+<div class="Shell">
+    <aside class='SideBar'>
+    <section class='avatar' style="background-image: url(/assets/pg-2.png)">
+        <div class='av-pic' style="background-image: url(/assets/avatar.png)">
+        </div>
+    </section>
+    <section class='menu'>
+        <div>DQ BLOG</div>
+        
+        <ul>
+          
+            <a href="/home/" class="Btn">
+              <li>Home</li>
+            </a>  
+          
+            <a href="/archives/" class="Btn">
+              <li>Archive</li>
+            </a>  
+          
+            <a href="/categories/" class="Btn">
+              <li>Categories</li>
+            </a>  
+          
+            <a href="/BLOG/" class="Btn">
+              <li>About</li>
+            </a>  
+          
+        </ul>
+    </section>
+    <section class="media">
+        
+    </section>
+</aside>
+
+    <div class="container">
+        <div data-pager-shell>
+            <ul class="Index">
+  
+    <header class='PageTitle'>
+        <h1>{ LeetCode }</h1>
+    </header>
+  
+  
+    <li>
+      <article class='ListView'>
+    <header class="title">
+      
+        <h1>
+          <a href="/2021/01/18/Leetcode/">LeetCode</a>
+        </h1>
+      
+      <div class='ListMeta'>
+  <time datetime="2021-01-17T16:00:00.000Z" itemprop="datePublished">
+    2021-01-18
+  </time>
+  
+  | 
+  <ul>
+    
+  <li class="meta-text">
+  { <a href="/tags/LeetCode/">LeetCode</a> }
+  </li>
+
+
+  </ul>
+  
+  
+</div>
+
+    </header>
+    <div>
+      
+        <h2 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h2><p>四类算法：</p>
+<p>1、贪心算法</p>
+<p>2、分而治之算法（递归思想）</p>
+<p>3、动态规划</p>
+<p>4、暴力出奇迹（穷举思想）</p>
+<h2 id="特殊语法"><a href="#特殊语法" class="headerlink" title="特殊语法"></a>特殊语法</h2><h5 id="1-for-char-amp-c-s"><a href="#1-for-char-amp-c-s" class="headerlink" title="1.for(char&amp; c : s)"></a>1.for(char&amp; c : s)</h5><p>作用：用于遍历string</p>
+<p>来源： 20(有效的括号）</p>
+<p>案例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">       <span class="built_in">stack</span>&lt;<span class="keyword">char</span>&gt; paren;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">char</span>&amp; c : s) &#123;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：存在for(char&amp; c : s)和for(cha c : s)</p>
+<p>​            效率前者（直接引用原字符串进行遍历）&gt;  后者（复制）</p>
+<p>Q1:前一段代码运行时间大于后一段代码？</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt;s1,s2;</span><br><span class="line">s2.push(s1.top()) ;s1.pop();</span><br><span class="line"><span class="keyword">int</span> val = s1.top(); s1.pop(); s2.push(val);</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+</article>
+
+    </li>
+  
+</ul>
+
+
+
+            <footer>
+    <div>© 2021 - Double Q </div>
+    <div>
+        <span>
+            Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+        </span>
+        ,
+        <span>
+            Theme - <a target="_blank" rel="noopener" href="https://github.com/nameoverflow/hexo-theme-icalm">Icalm</a>
+        </span>
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/pager/dist/singlepager.js"></script>
+
+<script>
+var sp = new Pager('data-pager-shell')
+
+</script>
+</body>
+</html>

@@ -62,6 +62,118 @@
     <header class="title">
       
         <h1>
+          <a href="/2021/01/18/Leetcode/">LeetCode</a>
+        </h1>
+      
+      <div class='ListMeta'>
+  <time datetime="2021-01-17T16:00:00.000Z" itemprop="datePublished">
+    2021-01-18
+  </time>
+  
+  | 
+  <ul>
+    
+  <li class="meta-text">
+  { <a href="/tags/LeetCode/">LeetCode</a> }
+  </li>
+
+
+  </ul>
+  
+  
+</div>
+
+    </header>
+    <div>
+      
+        <h2 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h2><p>四类算法：</p>
+<p>1、贪心算法</p>
+<p>2、分而治之算法（递归思想）</p>
+<p>3、动态规划</p>
+<p>4、暴力出奇迹（穷举思想）</p>
+<h2 id="特殊语法"><a href="#特殊语法" class="headerlink" title="特殊语法"></a>特殊语法</h2><h5 id="1-for-char-amp-c-s"><a href="#1-for-char-amp-c-s" class="headerlink" title="1.for(char&amp; c : s)"></a>1.for(char&amp; c : s)</h5><p>作用：用于遍历string</p>
+<p>来源： 20(有效的括号）</p>
+<p>案例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">       <span class="built_in">stack</span>&lt;<span class="keyword">char</span>&gt; paren;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">char</span>&amp; c : s) &#123;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：存在for(char&amp; c : s)和for(cha c : s)</p>
+<p>​            效率前者（直接引用原字符串进行遍历）&gt;  后者（复制）</p>
+<p>Q1:前一段代码运行时间大于后一段代码？</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt;s1,s2;</span><br><span class="line">s2.push(s1.top()) ;s1.pop();</span><br><span class="line"><span class="keyword">int</span> val = s1.top(); s1.pop(); s2.push(val);</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+</article>
+
+    </li>
+  
+    <li>
+      <article class='ListView'>
+    <header class="title">
+      
+        <h1>
+          <a href="/2021/01/18/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">贪心算法</a>
+        </h1>
+      
+      <div class='ListMeta'>
+  <time datetime="2021-01-17T16:00:00.000Z" itemprop="datePublished">
+    2021-01-18
+  </time>
+  
+  | 
+  <ul>
+    
+  <li class="meta-text">
+  { <a href="/tags/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">寒假每日一题</a> }
+  </li>
+
+
+  </ul>
+  
+  
+</div>
+
+    </header>
+    <div>
+      
+        <h2 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h2><p>做出在当前看来是最好的选择，即算法得到的是在某种意义上的局部最优解。一般用于求解最大或最小解，确定问题的可行范围（明确最优解和子问题最优解）</p>
+<p>（对子问题的局部最优解，最后整合成原来问题最优解）</p>
+<p>注：贪心避免回溯</p>
+<h4 id="案例：0-1背包问题"><a href="#案例：0-1背包问题" class="headerlink" title="案例：0-1背包问题"></a>案例：0-1背包问题</h4><p>有一个背包，最多能承载150斤的重量，现在有7个物品，重量分别为[35, 30, 60, 50, 40, 10, 25]，它们的价值分别为[10, 40, 30, 50, 35, 40, 30]，应该如何选择才能使得我们的背包背走最多价值的物品？</p>
+<p><strong>1、尽量选择当前物品价值最高</strong></p>
+<p>顺序是：4 2 6 5 。</p>
+<p>最终的总重量是：130。</p>
+<p>最终的总价值是：165。</p>
+<p><strong>2、选择当前物品重量最小</strong></p>
+<p>顺序是：6 7 2 1 5 。</p>
+<p>最终的总重量是：140。</p>
+<p>最终的总价值是：155。</p>
+<p><strong>3、每次选择价值密度最高 <em>（优化）</em></strong></p>
+<p>顺序是：6 2 7 4 1。</p>
+<p>最终的总重量是：150。</p>
+<p>最终的总价值是：170。</p>
+<h4 id="题练"><a href="#题练" class="headerlink" title="题练"></a>题练</h4><h5 id="1-货仓位置"><a href="#1-货仓位置" class="headerlink" title="1.货仓位置"></a>1.货仓位置</h5><p>在一条数轴上有 NN家商店，它们的坐标分别为 A1~AN。</p>
+<p>现在需要在数轴上建立一家货仓，每天清晨，从货仓到每家商店都要运送一车商品。</p>
+<p>为了提高效率，求把货仓建在何处，可以使得货仓到每家商店的距离之和最小。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dist_good</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;  <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">int</span> A[n+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)    <span class="built_in">cin</span>&gt;&gt;A[i];</span><br><span class="line">    sort(A,A+n);</span><br><span class="line">    <span class="keyword">int</span> dist_min=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)   dist_min+=<span class="built_in">abs</span>(A[i]-A[n&gt;&gt;<span class="number">1</span>]);<span class="comment">//核心代码</span></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;dist_min;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>题解：<br>两个点之间，中点一定是最小的。当商店个数是奇数时，中位数只有一个;当个数是偶数时，中位数有两个，由于货仓可以选择的是闭区间之间的任何一点，因此A[n/2];</p>
+<p>n&gt;&gt;1(位运算，即n/=2,效率更高)<br>$$<br>abs（A[i]-A[n&gt;&gt;1])→∑i=0n−1|ai−an2|<br>$$</p>
+
+      
+    </div>
+</article>
+
+    </li>
+  
+    <li>
+      <article class='ListView'>
+    <header class="title">
+      
+        <h1>
           <a href="/2021/01/18/Mysql%20%E5%9F%BA%E7%A1%80/">MYSQL基础</a>
         </h1>
       

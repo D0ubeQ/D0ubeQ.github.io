@@ -1,67 +1,95 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>LeetCode | DQ BLOG</title>
+  <meta charset="utf-8">
   
-  
-  
-  <!--link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/github-gist.min.css"-->
-  
-<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/github-gist.min.css">
 
+  
+  <title>LeetCode | DQ BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="算法思想四类算法： 1、贪心算法 2、分而治之算法（递归思想） 3、动态规划 4、暴力出奇迹（穷举思想） 特殊语法1.for(char&amp; c : s)作用：用于遍历string 来源： 20(有效的括号） 案例： 1234bool isValid(string s) &amp;#123;       stack&lt;char&gt; paren;       for (char&amp; c :">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode">
+<meta property="og:url" content="http://example.com/2021/01/18/Leetcode/index.html">
+<meta property="og:site_name" content="DQ BLOG">
+<meta property="og:description" content="算法思想四类算法： 1、贪心算法 2、分而治之算法（递归思想） 3、动态规划 4、暴力出奇迹（穷举思想） 特殊语法1.for(char&amp; c : s)作用：用于遍历string 来源： 20(有效的括号） 案例： 1234bool isValid(string s) &amp;#123;       stack&lt;char&gt; paren;       for (char&amp; c :">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-22T14:25:03.870Z">
+<meta property="article:author" content="Double Q">
+<meta property="article:tag" content="LeetCode">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="DQ BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
   
 <link rel="stylesheet" href="/css/style.css">
 
 <meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
-<div class="Shell">
-    <aside class='SideBar'>
-    <section class='avatar' style="background-image: url(/assets/pg-2.png)">
-        <div class='av-pic' style="background-image: url(/assets/avatar.png)">
-        </div>
-    </section>
-    <section class='menu'>
-        <div>DQ BLOG</div>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">DQ BLOG</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-        <ul>
-          
-            <a href="/home/" class="Btn">
-              <li>Home</li>
-            </a>  
-          
-            <a href="/archives/" class="Btn">
-              <li>Archive</li>
-            </a>  
-          
-            <a href="/categories/" class="Btn">
-              <li>Categories</li>
-            </a>  
-          
-            <a href="/BLOG/" class="Btn">
-              <li>About</li>
-            </a>  
-          
-        </ul>
-    </section>
-    <section class="media">
+          <a class="main-nav-link" href="/">Home</a>
         
-    </section>
-</aside>
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Leetcode" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/18/Leetcode/" class="article-date">
+  <time datetime="2021-01-17T16:00:00.000Z" itemprop="datePublished">2021-01-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      LeetCode
+    </h1>
+  
 
-    <div class="container">
-        <div data-pager-shell>
-            <div>
-  <article class='ContentView'>
-    <header class='PageTitle'>
-        <h1>LeetCode</h1>
-    </header>
-
-    <section>
-      <h2 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h2><p>四类算法：</p>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h2><p>四类算法：</p>
 <p>1、贪心算法</p>
 <p>2、分而治之算法（递归思想）</p>
 <p>3、动态规划</p>
@@ -78,59 +106,146 @@
 
 
 
+<h4 id="2-进制转换"><a href="#2-进制转换" class="headerlink" title="2.进制转换"></a>2.进制转换</h4><p>转至任意进制</p>
+<p><em>短除法</em></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> digital[<span class="number">20</span>]=&#123;<span class="string">&#x27;0&#x27;</span>,<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;4&#x27;</span>,<span class="string">&#x27;5&#x27;</span>,<span class="string">&#x27;6&#x27;</span>,<span class="string">&#x27;7&#x27;</span>,<span class="string">&#x27;8&#x27;</span>,<span class="string">&#x27;9&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="string">&#x27;G&#x27;</span>,<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;I&#x27;</span>,<span class="string">&#x27;J&#x27;</span>&#125;;</span><br><span class="line"><span class="function"><span class="built_in">string</span>  <span class="title">convert</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> arr[M];</span><br><span class="line">    <span class="built_in">memset</span>(arr,<span class="number">0</span>,<span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(<span class="keyword">char</span>));</span><br><span class="line">    <span class="built_in">string</span> num;</span><br><span class="line">    <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(x)&#123;</span><br><span class="line">        <span class="keyword">char</span> res=digital[x%n];</span><br><span class="line">        x/=n;</span><br><span class="line">        arr[count++]=res;</span><br><span class="line">    &#125;</span><br><span class="line">    num=arr;</span><br><span class="line">    reverse(num.begin(),num.end());</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>任意进制转至10进制</p>
+<p><em>秦九韶算法</em><br>$$<br>\sum_{i=0}^n{a_nx^n}=((a_nx+a_{n-1})x+a_{n-2})x…<br>$$</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">base10</span><span class="params">(<span class="built_in">string</span> num)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> c:num) res=res*<span class="number">10</span>+uget(c);</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> uget(<span class="keyword">char</span> c)&#123;</span><br><span class="line">    <span class="keyword">if</span> (c&lt;=<span class="string">&#x27;9&#x27;</span>) <span class="keyword">return</span> c-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> c-<span class="string">&#x27;A&#x27;</span>+<span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/18/Leetcode/" data-id="ckkff8jae0000m8u29somhbzw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li></ul>
 
-    </section>
+    </footer>
+  </div>
+  
     
-      <section class='ArticleMeta'>
-          <div>
-            发布于&nbsp;
-            <time datetime="2021-01-17T16:00:00.000Z" itemprop="datePublished">
-              2021-01-18
-            </time>
-          </div>
-          
-            <div>
-              tags: 
-  <li class="meta-text">
-  { <a href="/tags/LeetCode/">LeetCode</a> }
-  </li>
-
-
-            </div>
-          
-      </section>
-    
-    
-</article>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/18/Jquery/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jquery</div>
+    </a>
+  
+</nav>
 
   
-</div>
+</article>
 
-            <footer>
-    <div>© 2021 - Double Q </div>
-    <div>
-        <span>
-            Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
-        </span>
-        ,
-        <span>
-            Theme - <a target="_blank" rel="noopener" href="https://github.com/nameoverflow/hexo-theme-icalm">Icalm</a>
-        </span>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MYSQL/" rel="tag">MYSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" rel="tag">寒假每日一题</a></li></ul>
     </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/LeetCode/" style="font-size: 10px;">LeetCode</a> <a href="/tags/MYSQL/" style="font-size: 10px;">MYSQL</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" style="font-size: 20px;">寒假每日一题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/18/Leetcode/">LeetCode</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/18/Jquery/">jquery</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/18/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">贪心算法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/18/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">LeetCode</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/18/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Double Q<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
 </footer>
-
-        </div>
     </div>
-</div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
 
-<script src="/js/pager/dist/singlepager.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<script>
-var sp = new Pager('data-pager-shell')
 
-</script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
 </body>
 </html>

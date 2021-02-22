@@ -189,7 +189,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/LeetCode/" style="font-size: 10px;">LeetCode</a> <a href="/tags/MYSQL/" style="font-size: 10px;">MYSQL</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" style="font-size: 20px;">寒假每日一题</a>
+                        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/LeetCode/" style="font-size: 10px;">LeetCode</a> <a href="/tags/MYSQL/" style="font-size: 10px;">MYSQL</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" style="font-size: 20px;">寒假每日一题</a>
                     </div>
                 </section>
                 
@@ -258,11 +258,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-Jquery" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-cookie" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2021/01/18/Jquery/" class="article-date">
-      <time datetime="2021-01-17T16:00:00.000Z" itemprop="datePublished">2021-01-18</time>
+      <a  href="/2021/02/01/cookie/" class="article-date">
+      <time datetime="2021-01-31T16:00:00.000Z" itemprop="datePublished">2021-02-01</time>
 </a>
 
     </div>
@@ -276,7 +276,250 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2021/01/18/Jquery/">jquery</a>
+      <a  class="article-title" href="/2021/02/01/cookie/">jquery</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p> cookie ：会话跟踪技术 客户端</p>
+<p>session ：会话跟踪技术 服务端</p>
+<p>cookie作用：</p>
+<p>将网页中的数据保存到浏览器中</p>
+<p>cookie生命周期：</p>
+<p>默认情况下生命周期是一次会话（浏览器被关闭）</p>
+<p>（1）如果是通过expires=设置了过期时间，并且过期时间没有过期，那么下次打开浏览器还是存在</p>
+<p>（2）如果是通过expires=设置了过期时间，并且过期时间已经过期，那么会立即删除保存的数据</p>
+<p>注意点：</p>
+<p>cookie默认不会博爱村任何数据</p>
+<p>cookie不能一次性设置多条数据，要想保存多条数据，只能一条一条设置</p>
+<p>cookie有大小和个数的限制</p>
+<p>个数限制：20~50</p>
+<p>大小限制：4KB左右</p>
+<p>cookie作用范围：</p>
+<p>同一个浏览器的同一个路径下访问</p>
+<p>如果在同一个浏览器中，默认情况下下一级路径可以访问</p>
+<p>如果说保存到了/jQuery/Ajax路径下，我们现在/jQuery/Ajax/xxxx，并且在/jQuery/</p>
+<p>例如：我们在<a target="_blank" rel="noopener" href="http://www.baidu.com下保存了一个cookie,那么我们在edu.baidu.com中是无法访问的/">www.baidu.com下保存了一个cookie，那么我们在edu.baidu.com中是无法访问的</a></p>
+<p>如果现在edu.baidu中也能访问，那么需要添加一句代码domian=baidu.com;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="built_in">document</span>.cookie);</span><br><span class="line"><span class="keyword">var</span> date=<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">data.setDate(date.getDate()-<span class="number">1</span>);</span><br><span class="line"><span class="built_in">document</span>.cookie= <span class="string">&quot;age=xx;expires=&quot;</span>+date.toGMTString()+<span class="string">&quot;;&quot;</span>;</span><br><span class="line">alert(<span class="built_in">document</span>.cookie);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.cookie=<span class="string">&quot;name=zs;path=/;domain=127.0.0.1;&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">document</span>.cookie=<span class="string">&quot;age=xx&quot;</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addCookie</span>(<span class="params">kry,value,day,path,domain</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//1.处理默认保存的路径</span></span><br><span class="line">        <span class="keyword">var</span> index=<span class="built_in">window</span>.location.pathname.lastIndexOf(<span class="string">&quot;/&quot;</span>);</span><br><span class="line">        <span class="keyword">var</span> currentPath=<span class="built_in">window</span>.location.pathname.silce(<span class="number">0</span>,index);</span><br><span class="line">        path=path||currentPath;</span><br><span class="line">        <span class="comment">//2.处理默认保存的domain</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">var</span> date=<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        date.setDate(date.getDate()-<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">document</span>.cookie=<span class="string">&quot;key=value;expores=&quot;</span>+date.toGMTString()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-前端优化" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2021/01/29/%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/" class="article-date">
+      <time datetime="2021-01-29T13:41:29.213Z" itemprop="datePublished">2021-01-29</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Ajax" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2021/01/26/Ajax/" class="article-date">
+      <time datetime="2021-01-25T16:00:00.000Z" itemprop="datePublished">2021-01-26</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2021/01/26/Ajax/">Ajax</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="基础知识点"><a href="#基础知识点" class="headerlink" title="基础知识点"></a>基础知识点</h2><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>0.什么是ajax？</p>
+<p>AJAX是与服务器交换数据并更新部分网页的艺术，在不重新加载整个页面的情况下。</p>
+<p>即：用于网页和服务器交换数据</p>
+<p>1.什么是服务器？<br>是提供特殊服务功能的电脑，比如文件服务器，Web服务器</p>
+<p>2.如何将电脑变成服务器？</p>
+<p>实现功能需要下载相应软件，下载任意软件就可以实现服务器</p>
+<p>例如：Apache 、IIS、Tomcat、Nginx、NodeJS等</p>
+<p>服务器能够管理网站，对http请求进行处理</p>
+<p>3.后端php代码</p>
+<p>后端代码都不能直接在浏览器中运行，必须要放进服务器环境的文件下</p>
+<p>通过浏览器—&gt;服务器—&gt;文件进行运行</p>
+<h2 id="Web服务器"><a href="#Web服务器" class="headerlink" title="Web服务器"></a>Web服务器</h2><h4 id="1-什么是MAMPServer软件？"><a href="#1-什么是MAMPServer软件？" class="headerlink" title="1.什么是MAMPServer软件？"></a>1.什么是MAMPServer软件？</h4><p>W:Windows操作系统</p>
+<p>A:Apache世界第一的服务器软件，特点是简单，速度快，稳定</p>
+<p>M:MySQL 开源免费的数据库软件，特点是体积小、速度快、成本低</p>
+<p>P:php超文本预处理器，直接把代码嵌入HTML文档中执行</p>
+<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h4><h4 id="3-测试访问"><a href="#3-测试访问" class="headerlink" title="3.测试访问"></a>3.测试访问</h4><p>打开浏览器输入127.0.0.1查看显示的内容</p>
+<h4 id="4-修改端口号"><a href="#4-修改端口号" class="headerlink" title="4.修改端口号"></a>4.修改端口号</h4><p>4.1在httpd.conf文件搜索Listen,改为想要的数字即可</p>
+<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><p>1.创建异步对象</p>
+<p>2.设置请求方式和请求地址</p>
+<p>method：请求的类型；GET或POST</p>
+<p>url：文件在服务器上的位置</p>
+<p>async：true(异步)或false(同步)</p>
+<p>3.发送请求</p>
+<p>4.监听状态变化</p>
+<p>​    0：请求未初始化</p>
+<p>​    1：服务器连接已建立</p>
+<p>​    2：请求已接收</p>
+<p>​    3：请求处理中</p>
+<p>​    4：请求已完成，且响应已就绪</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">window.onload=function(ev)&#123;</span><br><span class="line">    var obtn=document.querySelector(&quot;buttom&quot;);</span><br><span class="line">    obtn.onclick=function(ev1)&#123;</span><br><span class="line">        ajax(&quot;xxx&quot;,function(xhr)&#123;</span><br><span class="line">            alert(xhr.responseText);</span><br><span class="line">        &#125;,funtion(xhr)&#123;</span><br><span class="line">             alert(&quot;请求失败&quot;);</span><br><span class="line">             &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//get</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ajax</span>(<span class="params">url,sucess,error</span>)</span>&#123;</span><br><span class="line"><span class="comment">//1.创建异步对象</span></span><br><span class="line">	<span class="keyword">var</span> xmlhttp=<span class="keyword">new</span> XMLHttpRequest;</span><br><span class="line"><span class="comment">//2.设置请求方式和请求地址</span></span><br><span class="line">	xmlhttp.open(<span class="string">&quot;GET&quot;</span>,url,<span class="literal">true</span>);</span><br><span class="line"><span class="comment">//3.发送请求</span></span><br><span class="line">	xmlhttp.send();</span><br><span class="line"><span class="comment">//4.监听状态变化</span></span><br><span class="line">	xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params">ev2</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(xmlhttp.readyState==<span class="number">4</span>)</span><br><span class="line">		<span class="comment">//判断是否请求成功</span></span><br><span class="line">		<span class="function"><span class="title">if</span>(<span class="params">xmlhttp.status&gt;=<span class="number">200</span> &amp;&amp; xmlhttp.status&lt;<span class="number">300</span> || xmlhttp.status === <span class="number">304</span> </span>)</span>&#123;</span><br><span class="line">        <span class="comment">//5.处理返回的结果</span></span><br><span class="line">        <span class="comment">//console.log(&quot;接收到服务器返回的数据&quot;)；</span></span><br><span class="line">          success(xmlhttp);                                     &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&quot;没有收到服务器返回的数据&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="兼容IE"><a href="#兼容IE" class="headerlink" title="兼容IE"></a>兼容IE</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> obtn=<span class="built_in">document</span>.querySelector(<span class="string">&quot;button&quot;</span>);</span><br><span class="line">    obtn.conclick=<span class="function"><span class="keyword">function</span>(<span class="params">ev1</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> xhr;</span><br><span class="line">        <span class="function"><span class="title">if</span>(<span class="params"><span class="built_in">window</span>.XMLHttpRequest</span>)</span>&#123;</span><br><span class="line">            <span class="comment">//code for IE7+,firefox,chrome等</span></span><br><span class="line">            xhr=<span class="keyword">new</span> XMLHttpRequest;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//code foe IE6,IE5</span></span><br><span class="line">            xhr=<span class="keyword">new</span> ActiveXObject(<span class="string">&quot;Microsoft.XMLHTTP&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> xhr=<span class="keyword">new</span> XMLHttpRequest;</span><br><span class="line">        <span class="comment">//在IE浏览器中，如果通过AJax发送GET请求，那么IE浏览器认为同一个URL只有一个结果</span></span><br><span class="line">        xhr.open(<span class="string">&quot;GET&quot;</span>,<span class="string">&quot;xxx&quot;</span>+(<span class="keyword">new</span> Data().getTime()),<span class="literal">true</span>);</span><br><span class="line">        xhr.send();</span><br><span class="line">        xhr.onreadystatechange=<span class="function"><span class="title">sunction</span>(<span class="params">ev2</span>)</span>&#123;</span><br><span class="line">            <span class="function"><span class="title">if</span>(<span class="params">xhr.readyState===<span class="number">4</span></span>)</span>&#123;</span><br><span class="line">                <span class="function"><span class="title">if</span>(<span class="params">xhr.status&gt;=<span class="number">200</span> &amp;&amp; xhr.status&lt;<span class="number">300</span>||shr.status === <span class="number">304</span></span>)</span>&#123;</span><br><span class="line">                    alert(xhr.responseText);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    alert(<span class="string">&quot;请求失败&quot;</span>)；</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="案例-封装"><a href="#案例-封装" class="headerlink" title="案例(封装)"></a>案例(封装)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!html </span><br><span class="line">var obtn&#x3D;document.querySelector(&quot;button&quot;);</span><br><span class="line">    obtn.conclick&#x3D;function(ev1)&#123;</span><br><span class="line">        &#x2F;&#x2F;url?key&#x3D;value &amp; key&#x3D;value;</span><br><span class="line">         ajax(&#123;</span><br><span class="line">            url:&quot;ajax_get.php&quot;.</span><br><span class="line">            data:&#123;</span><br><span class="line">                &quot;userName&quot;:&quot;lnj&quot;,</span><br><span class="line">                &quot;userPwd&quot;:123546;</span><br><span class="line">            &#125;,</span><br><span class="line">            type:&quot;GET&quot;,</span><br><span class="line">            timeout:3000,&#x2F;&#x2F;3000为设置的超时时间</span><br><span class="line">            success:function(xhr)&#123;</span><br><span class="line">               alert(xhr.responseText);</span><br><span class="line">            &#125;,</span><br><span class="line">            error:function(xhr)&#123;</span><br><span class="line">                alert(&quot;请求失败&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#x2F;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;?hph</span><br><span class="line">sleep(seconds:5);</span><br><span class="line">echo $_GET[&quot;userName&quot;];</span><br><span class="line">echo $_GET[&quot;userPwd&quot;];</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">obj2str</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    data.t=<span class="keyword">new</span> Data().getTime();</span><br><span class="line">    <span class="keyword">var</span> res=[];</span><br><span class="line">    <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">var</span> kry <span class="keyword">in</span> data</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//encodeURIComponent会把URL中的中文转码</span></span><br><span class="line">        res.push(encoeURIComponent(key)+<span class="string">&quot;=&quot;</span>+encoeURIComponen(data[key]));</span><br><span class="line">        <span class="comment">//[userName=lnj,userPwd=123456];</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res.join(<span class="string">&quot;&amp;&quot;</span>);</span><br><span class="line">    <span class="comment">//userName=lnj&amp;userPwd=123456</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ajax</span>(<span class="params">option</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">clearInterval</span>(timer);</span><br><span class="line">    <span class="comment">//增加步骤0.将对象转换为字符串</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> str=obj2str(option.data);</span><br><span class="line">    <span class="comment">//key=value&amp;key=value;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> xmlhttp;</span><br><span class="line">    <span class="keyword">if</span>（<span class="built_in">window</span>.XMLHttpRequest)&#123;</span><br><span class="line">        <span class="comment">//code for IE7+,firefox,chrome等</span></span><br><span class="line">        xlhttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//code foe IE6,IE5</span></span><br><span class="line">        xlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">&quot;Microsoft.XMLHTTP&quot;</span>);</span><br><span class="line">     &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//请求类型：GET或POST</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">option.type.toLowerCase()===<span class="string">&quot;get&quot;</span></span>)</span>&#123;</span><br><span class="line">   		 xlhttp.open(option.type,option.url+<span class="string">&quot;?&quot;</span>+str,<span class="literal">true</span>);</span><br><span class="line">        xlhttp.send();</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        xlhttp.open(option.type,option.url+<span class="string">&quot;?&quot;</span>+str,<span class="literal">true</span>);</span><br><span class="line">        <span class="comment">//该代码一定放在open和send之间</span></span><br><span class="line">        xmlhttp. se tReques tHeader( <span class="string">&quot;Content-type&quot;</span>, 			<span class="string">&quot;application/x-www-form-urlencoded&quot;</span>);</span><br><span class="line">		xmlhttp. send(str) ;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">        xlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params">ev2</span>)</span>&#123;</span><br><span class="line">            <span class="function"><span class="title">if</span>(<span class="params">xlhttp.readyState===<span class="number">4</span></span>)</span>&#123;</span><br><span class="line">                <span class="function"><span class="title">if</span>(<span class="params">xlhttp.status&gt;=<span class="number">200</span> &amp;&amp; xhr.status&lt;<span class="number">300</span>||shr.status === <span class="number">304</span></span>)</span>&#123;</span><br><span class="line">                   option.success();</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                   option.error();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="comment">//判断外界是否传入了超时时间</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">option.timeout</span>)</span>&#123;</span><br><span class="line">      timer=<span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&quot;中断请求&quot;</span>)；</span><br><span class="line">            xmlhttp.abort();</span><br><span class="line">            <span class="built_in">clearInterval</span>(timer);</span><br><span class="line">        &#125;,option.timeout);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="jQuery封装的ajax"><a href="#jQuery封装的ajax" class="headerlink" title="jQuery封装的ajax"></a>jQuery封装的ajax</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> Btn=<span class="built_in">document</span>.querySelector(<span class="string">&quot;button&quot;</span>);</span><br><span class="line">    oBtn.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">ev1</span>)</span>&#123;</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            type:<span class="string">&quot;GET&quot;</span>,</span><br><span class="line">            url:<span class="string">&quot;ajax.php&quot;</span>,</span><br><span class="line">            data:<span class="string">&quot;uerName=xx&amp;&amp;userPwd=xxx&quot;</span>,</span><br><span class="line">            success:<span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>&#123;</span><br><span class="line">                alert(msg);</span><br><span class="line">			&#125;,</span><br><span class="line">            error:<span class="function"><span class="keyword">function</span>(<span class="params">xhr</span>)</span>&#123;</span><br><span class="line">                alert(xhr,status);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优点：</p>
+<p>get不区分大小写，既可以传入post也可也是get</p>
+<p>传入参数为对象，输入内容可以不固定位置</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JQuery" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2021/01/20/JQuery/" class="article-date">
+      <time datetime="2021-01-19T16:00:00.000Z" itemprop="datePublished">2021-01-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2021/01/20/JQuery/">jquery</a>
     </h1>
   
 
@@ -303,7 +546,7 @@
 
 
 <h4 id="核心函数"><a href="#核心函数" class="headerlink" title="核心函数"></a>核心函数</h4><p>1.接收一个函数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>))</span>&#123;</span><br><span class="line">	alert(<span class="string">&quot;hello &quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span></span>&#123;</span><br><span class="line">	alert(<span class="string">&quot;hello &quot;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>2.接收一个字符串</p>
 <p>2.1接收一个字符串选择器</p>
@@ -321,11 +564,11 @@
 
 
 <h4 id="静态方法和实例方法"><a href="#静态方法和实例方法" class="headerlink" title="静态方法和实例方法"></a>静态方法和实例方法</h4><p>1.定义一个类</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Aclass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Aclass</span>(<span class="params">&#123;</span></span></span><br><span class="line"><span class="function"><span class="params">&#125;</span>)</span></span><br></pre></td></tr></table></figure>
 
 <p>2.给这个类添加一个静态方法</p>
 <p>直接添加给类的就是静态方法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">AClass.staticMethod=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">&quot;staticMethod&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">AClass.staticMethod=<span class="function"><span class="keyword">function</span>(<span class="params">&#123;</span></span></span><br><span class="line"><span class="function"><span class="params">	alert(<span class="string">&quot;staticMethod&quot;</span>);</span></span></span><br><span class="line"><span class="function"><span class="params">&#125;</span>)</span></span><br></pre></td></tr></table></figure>
 
 <p>静态方法通过类名调用</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AClass.staticMethod();</span><br></pre></td></tr></table></figure>
@@ -342,7 +585,7 @@
 
 
 
-<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><p>1.什么式jQuery对象？</p>
+<h4 id="对象、伪数组"><a href="#对象、伪数组" class="headerlink" title="对象、伪数组"></a>对象、伪数组</h4><p>1.什么式jQuery对象？</p>
 <p>jQuery对象是一个伪数组</p>
 <p>2.什么是伪数组？</p>
 <p>有0到length-1的属性，并且有length属性</p>
@@ -382,7 +625,210 @@
 
 
 
-<h2 id="方法掌握"><a href="#方法掌握" class="headerlink" title="方法掌握"></a>方法掌握</h2>
+<h2 id="方法掌握"><a href="#方法掌握" class="headerlink" title="方法掌握"></a>方法掌握</h2><h4 id="array"><a href="#array" class="headerlink" title="array"></a>array</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$,isArry()</span><br><span class="line">作用：判断传入的对象是否是一个函数</span><br><span class="line">返回值：<span class="literal">true</span>/<span class="literal">false</span>;</span><br><span class="line">注意：</span><br><span class="line">jQuery框架本质是一个函数</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"><span class="built_in">window</span>,<span class="literal">undefined</span></span>)</span>&#123;</span><br><span class="line">&#125;)(<span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="attar"><a href="#attar" class="headerlink" title="attar"></a>attar</h4><p>1.attar(name|pro|key,val|fun)</p>
+<p>作用：获取或者设置属性节点的值</p>
+<p>可以传递一个参数，也可也传递两个参数</p>
+<p>如果传递一个参数，即可获取属性节点的值</p>
+<p>如果传递两个参数，即可设置属性节点的值</p>
+<p><em>注意点</em>：</p>
+<p>如果是获取：无论找到多少元素，只返回第一个元素</p>
+<p>如果是设置：找到多少元素就设置多少个元素</p>
+<p>如果是设置：如果设置的属性节点不存在，那么系统会自动新增</p>
+<p>2.removeAttr(name)</p>
+<p>删除属性节点</p>
+<p>注意：</p>
+<p>会删除所有找到元素指定的属性节点</p>
+<h4 id="prop"><a href="#prop" class="headerlink" title="prop"></a>prop</h4><p>特点：与attr方法一致（removeProp与removeAttr方法一致）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;span&quot;</span>).eq(<span class="number">0</span>).prop(<span class="string">&quot;demo&quot;</span>,<span class="string">&quot;it666&quot;</span>);</span><br><span class="line"><span class="comment">//在span的第一个eq属性添加名为“it666&quot;的demo属性节点</span></span><br><span class="line">$(<span class="string">&quot;span&quot;</span>).eq(<span class="number">1</span>).prop(<span class="string">&quot;demo&quot;</span>,<span class="string">&quot;lnj&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&quot;span&quot;</span>).prop(<span class="string">&quot;demo&quot;</span>));</span><br><span class="line"><span class="comment">//获取该元素</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;span&quot;</span>).removeProp(<span class="string">&quot;demo&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>注意点：prop方法不仅可以操作属性节点也可操作属性</p>
+<p>官方推荐操作具有true/false返回值的属性节点时使用<code>prop（）</code>；</p>
+<p>例如：disabled、checked、selected等</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log($(<span class="string">&quot;input&quot;</span>).prop(<span class="string">&quot;checked&quot;</span>));</span><br><span class="line"><span class="comment">//true/false</span></span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&quot;input&quot;</span>).attar(<span class="string">&quot;checked&quot;</span>));</span><br><span class="line"><span class="comment">//checked/undefined</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>应用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>给按钮添加点击事件</span><br><span class="line"><span class="keyword">var</span> btn=<span class="built_in">document</span>.getElementsByTagName(<span class="string">&quot;button&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">btn.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">&#123;</span></span></span><br><span class="line"><span class="function"><span class="params">	<span class="regexp">//</span><span class="number">2.</span>获取输入框输入的内容</span></span></span><br><span class="line"><span class="function"><span class="params">	<span class="keyword">var</span> input=<span class="built_in">document</span>.getElementsByTagName(<span class="string">&quot;input&quot;</span>);</span></span></span><br><span class="line"><span class="function"><span class="params">	<span class="keyword">var</span> text=input.value;</span></span></span><br><span class="line"><span class="function"><span class="params">	<span class="regexp">//</span>修改img得src属性节点的值</span></span></span><br><span class="line"><span class="function"><span class="params">    <span class="regexp">//</span>$(<span class="string">&quot;img&quot;</span>).attr(<span class="string">&quot;src&quot;</span>,text);</span></span></span><br><span class="line"><span class="function"><span class="params">     $(<span class="string">&quot;img&quot;</span>).prop(<span class="string">&quot;src&quot;</span>,text);</span></span></span><br><span class="line"><span class="function"><span class="params">&#125;</span>)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="trim"><a href="#trim" class="headerlink" title="trim"></a>trim</h4><p>作用：去除字符串两端的空格</p>
+<p>参数：需要去除空格的字符串</p>
+<p>返回值：去除之后的字符串</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">&quot;   Inj    &quot;</span>;</span><br><span class="line"><span class="keyword">var</span> res=$.trim(str);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="each"><a href="#each" class="headerlink" title="each"></a>each</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> obj=&#123;<span class="number">0</span>:<span class="number">1</span>,<span class="number">1</span>:<span class="number">3</span>,<span class="number">2</span>:<span class="number">5</span>,<span class="number">3</span>:<span class="number">7</span>,<span class="number">4</span>:<span class="number">9</span>,<span class="attr">length</span>:<span class="number">5</span>&#125;;<span class="comment">//伪数组</span></span><br></pre></td></tr></table></figure>
+
+<p>第一个参数：遍历到的元素</p>
+<p>第二个参数：当前遍历到的索引</p>
+<p>注意点：<br>原生forEach方法只能遍历数组，不能遍历伪元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">value,index</span>)</span>&#123;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>1.利用jQuery的each静态方法遍历数组</p>
+<p>第一个参数：当前遍历到的索引</p>
+<p>第二个参数：遍历到的元素</p>
+<p>注意点：jQuery的each方法是可以遍历伪数组的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$.each(arr,<span class="function"><span class="keyword">function</span>(<span class="params">index,value</span>)</span>&#123;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="hold-ready"><a href="#hold-ready" class="headerlink" title="hold ready"></a>hold ready</h4><p>作用：暂停ready执行</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.holdReady(<span class="literal">true</span>);</span><br><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">&quot;ready&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">var</span> btn=<span class="built_in">document</span>.getElementsByTagName(<span class="string">&quot;button&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">btn.onlick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $.holdReady(<span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="map"><a href="#map" class="headerlink" title="map"></a>map</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj=&#123;<span class="number">0</span>:<span class="number">1</span>,<span class="number">1</span>:<span class="number">3</span>,<span class="number">2</span>:<span class="number">5</span>,<span class="number">3</span>:<span class="number">7</span>,<span class="number">4</span>:<span class="number">9</span>,<span class="attr">length</span>:<span class="number">5</span>&#125;;<span class="comment">//伪数组</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>1.利用原生JS的map方法遍历</p>
+<p>第一个参数：当前遍历到的元素</p>
+<p>第二个参数：当前遍历到的索引</p>
+<p>第三个元素：当前被遍历的数组</p>
+<p>注意点：</p>
+<p>和原生forEach一样，不能遍历的伪数组</p>
+<p>2.jQuery中的map</p>
+<p>第一个参数：要遍历的数组</p>
+<p>第二个参数：每遍历一个元素以后执行的回调函数</p>
+<p>回调函数的参数：</p>
+<p>第一个参数：遍历到的元素</p>
+<p>第二个参数：遍历到的索引</p>
+<p>注意点：<br>和jQuery中的each静态方法一样，map的静态方法也可以遍历伪数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.map(arr,<span class="function"><span class="keyword">function</span>(<span class="params">value,index</span>))</span></span><br><span class="line"><span class="function"><span class="title">$</span>.<span class="title">map</span>(<span class="params">obj,<span class="keyword">function</span>(value,index)</span>)</span></span><br><span class="line"><span class="function">//这里的<span class="title">arr</span>和<span class="title">obj</span>指的是<span class="title">each</span>中的同一个对象</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>map和each的区别</strong></p>
+<p>each静态方法默认的返回值即遍历对象</p>
+<p>map返回的是一个空数组</p>
+<p>each静态方法不支持回调函数中对遍历的数组进行处理</p>
+<p>map可以对会函数通过<code>return</code>进行处理并生成新的数组返回</p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h4 id="css类"><a href="#css类" class="headerlink" title="css类"></a>css类</h4><p><strong>1.增删</strong></p>
+<p>（1）.addClass(class|fn)</p>
+<p>作用：添加一个类</p>
+<p>如果要添加多个，类名之间用空格隔开</p>
+<p>（2）.removeCla（[class|fn])</p>
+<p>作用：删除一个类</p>
+<p>如果想删除多个，类名之间空格隔开</p>
+<p>（3）.toggleClass（class|fn[,sw])</p>
+<p>作用：切换类</p>
+<p>有则删除，无则添加</p>
+<p><strong>2.操作内容</strong></p>
+<p>（1）逐个设置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;div&quot;</span>).css(<span class="string">&quot;width&quot;</span>,<span class="string">&quot;100px&quot;</span>);</span><br><span class="line">$(<span class="string">&quot;div&quot;</span>).css(<span class="string">&quot;height&quot;</span>,<span class="string">&quot;100px&quot;</span>);</span><br><span class="line">$(<span class="string">&quot;div&quot;</span>).css(<span class="string">&quot;background&quot;</span>,<span class="string">&quot;red&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>（2）链式设置</p>
+<p>注意：链式操作若&gt;3步，建议分开</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;div&quot;</span>).css(<span class="string">&quot;width&quot;</span>,<span class="string">&quot;100px&quot;</span>).$(<span class="string">&quot;div&quot;</span>).css(<span class="string">&quot;height&quot;</span>,<span class="string">&quot;100px&quot;</span>).$(<span class="string">&quot;div&quot;</span>).css(<span class="string">&quot;background&quot;</span>,<span class="string">&quot;red&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>（2）批量设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;div&quot;).css(&#123;</span><br><span class="line">	width:&quot;100px&quot;,</span><br><span class="line">	height:&quot;100px&quot;,</span><br><span class="line">	background:&quot;red&quot;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="文本值设置"><a href="#文本值设置" class="headerlink" title="文本值设置"></a>文本值设置</h4><p>1.<code>html([cal|fn])</code></p>
+<p>和原生JS的innerHTML一模一样</p>
+<p>2.<code>text([cal|fn])</code></p>
+<p>和原生JS中的innerText一模一样</p>
+<p>3.<code>val(val|fn|arr])</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btns=<span class="built_in">document</span>.getElementByTagName(<span class="string">&quot;button&quot;</span>);</span><br><span class="line">btns[<span class="number">0</span>].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">&quot;div&quot;</span>).html(<span class="string">&quot;&lt;p&gt;我是段落&lt;span&gt;我是span&lt;/span&gt;&lt;/p&gt;&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line">btns[<span class="number">1</span>].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      $(<span class="string">&quot;div&quot;</span>).text(<span class="string">&quot;&lt;p&gt;我是段落&lt;span&gt;我是span&lt;/span&gt;&lt;/p&gt;&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="window"><a href="#window" class="headerlink" title="window"></a>window</h4><p>1.<code>$.isWindow();</code></p>
+<p>作用：判断传入对象是否是window对象</p>
+<p>返回值：true/flase</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> res=$.isWindow(w);</span><br><span class="line"><span class="built_in">console</span>.log(res);<span class="comment">//获取</span></span><br></pre></td></tr></table></figure>
+
+<p>2 . <code>$.isArray();</code></p>
+<p>作用：判断传入对象是否是真数组</p>
+<p>返回值：true/false</p>
+<h4 id="scrolltop"><a href="#scrolltop" class="headerlink" title="scrolltop"></a>scrolltop</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">btn[<span class="number">0</span>].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="comment">//获取滚动的偏移量 </span></span><br><span class="line">   <span class="built_in">console</span>.log($(<span class="string">&quot;.scroll&quot;</span>).scrollTop());</span><br><span class="line">   <span class="comment">//获取网页滚动的偏移量</span></span><br><span class="line">  <span class="built_in">console</span>.log($(<span class="string">&quot;body&quot;</span>).scrollTop+$(<span class="string">&quot;html&quot;</span>).scrollTop());<span class="comment">//兼容IE</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">btn[<span class="number">1</span>].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//设置滚动的偏移量</span></span><br><span class="line">    $(<span class="string">&quot;scroll&quot;</span>).scrollTop(<span class="number">300</span>);</span><br><span class="line">    <span class="comment">//设置网页滚动偏移量</span></span><br><span class="line">    $(<span class="string">&quot;html,body&quot;</span>).scrollTop(<span class="number">300</span>);<span class="comment">//兼容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="位置尺寸"><a href="#位置尺寸" class="headerlink" title="位置尺寸"></a>位置尺寸</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btns=<span class="built_in">document</span>.getElementByTagName(<span class="string">&quot;button&quot;</span>);</span><br><span class="line"><span class="comment">//监听获取</span></span><br><span class="line">btn[<span class="number">0</span>].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//获取元素的宽度</span></span><br><span class="line">    <span class="built_in">console</span>.log($(<span class="string">&quot;.father&quot;</span>).width);</span><br><span class="line">    </span><br><span class="line">    offset([coordinates]);</span><br><span class="line">    <span class="comment">//作用：获取元素距离窗口的偏移量</span></span><br><span class="line">    position();</span><br><span class="line">    <span class="comment">//作用：获取元素距离定位元素的偏移量</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">console</span>.log($(<span class="string">&quot;.son&quot;</span>).position().width);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//监听设置</span></span><br><span class="line">btns[<span class="number">1</span>].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//设置元素的宽度</span></span><br><span class="line">    $.(<span class="string">&quot;.father&quot;</span>).width(<span class="string">&quot;500px&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h4 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h4><p>1.什么是事件冒泡</p>
+<p>对子元素进行操作会引发父元素执行同样的操作</p>
+<p>2.如何阻止事件冒泡</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.son&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">     alert(<span class="string">&quot;son&quot;</span>);</span><br><span class="line">	<span class="comment">// return false; </span></span><br><span class="line">	 event.stopPropagation();</span><br><span class="line"> &#125;)</span><br><span class="line">$(<span class="string">&quot;.father&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     alert(<span class="string">&quot;son&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.什么是默认行为</p>
+<p>用户执行某些操作时，元素有自己的默认行为</p>
+<p>例如<a>，会自动跳转网页</p>
+<p>4.如何阻止默认行为</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;a&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">evernt</span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;弹出注册框&quot;</span>)；</span><br><span class="line">    retrun <span class="literal">false</span>;</span><br><span class="line">    event.preventDefault();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h4><p>jQuery中有两种方法</p>
+<p>1.eventName(fn);</p>
+<p>编码效率高，但是部分事件jQuery没有实现，所以不能添加</p>
+<p>2.on(eventName,fn);</p>
+<p>编码效率略低，所有js事件都可以添加</p>
+<p>注意点：</p>
+<p>添加多个相同或者不同类型的事件，不会覆盖</p>
+<h4 id="事件触发"><a href="#事件触发" class="headerlink" title="事件触发"></a>事件触发</h4><p><code>$(&quot;.father&quot;).trigger(&quot;click&quot;);</code></p>
+<p>利用trigger会触发事件冒泡</p>
+<p><code>$(&quot;.son&quot;).triggerHandler(&quot;click&quot;);</code></p>
+<p>triggerHandler不会触发事件冒泡</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;son&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;son&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">$(<span class="string">&quot;father&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;father&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;input[typr=&#x27;submit&#x27;]&quot;</span>).trigger(<span class="string">&quot;click&quot;</span>);<span class="string">`</span></span><br><span class="line"><span class="string">$(&quot;input[typr=&#x27;submit&#x27;]&quot;).triggerHandler(&quot;click&quot;);`</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;a&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">&#125;)</span><br><span class="line">$(<span class="string">&quot;a&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $.(<span class="string">&quot;span).trigger(&quot;</span>a<span class="string">&quot;);</span></span><br><span class="line"><span class="string">&#125;)</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<p><a>标签比较特殊，使用trigger也不能触发冒泡事件</p>
+<p>所以可以在改a标签内添加<span></p>
+<h4 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h4><p>想要自定义事件，必须满足两个条件</p>
+<p>1.事件必须通过on绑定</p>
+<p>2.事件必须通过trigger触发</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.span&quot;</span>).on(<span class="string">&quot;myClick&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;son&quot;</span>);</span><br><span class="line">&#125;)</span><br><span class="line">$(<span class="string">&quot;.son&quot;</span>).trigger(<span class="string">&quot;myClick&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="事件移除"><a href="#事件移除" class="headerlink" title="事件移除"></a>事件移除</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//off方法如果不传递参数，会移除所有的事件</span></span><br><span class="line">$(<span class="string">&quot;button&quot;</span>).off();</span><br><span class="line"><span class="comment">//off方法如果传递一个参数，会移除所有指定类型的事件</span></span><br><span class="line">$(<span class="string">&quot;button&quot;</span>).off(<span class="string">&quot;click&quot;</span>);</span><br><span class="line">off方法如果传递两个参数，会移除所有指定类型的指定事件</span><br><span class="line">$(<span class="string">&quot;button&quot;</span>).off(<span class="string">&quot;click&quot;</span>,test1);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="事件命名空间"><a href="#事件命名空间" class="headerlink" title="事件命名空间"></a>事件命名空间</h4><p>想要事件的命名空间有效，必须满足两个条件</p>
+<p>1.事件通过on来绑定</p>
+<p>2.通过trigger触发</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.son&quot;</span>).on(<span class="string">&quot;click.QQ&quot;</span>,<span class="function"><span class="title">funtcion</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      alert(<span class="string">&quot;click1&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">&quot;.son&quot;</span>).on(<span class="string">&quot;click.YY&quot;</span>,<span class="function"><span class="title">funtcion</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      alert(<span class="string">&quot;click2&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;.son&quot;</span>).trigger(<span class="string">&quot;click.QQ&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>相关面题：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.father&quot;</span>).on(<span class="string">&quot;click.QQ&quot;</span>,<span class="function"><span class="title">funtcion</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      alert(<span class="string">&quot;father click1&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">&quot;.father&quot;</span>).on(<span class="string">&quot;click&quot;</span>,<span class="function"><span class="title">funtcion</span>(<span class="params"></span>)</span>&#123;<span class="comment">//无命名空间</span></span><br><span class="line">      alert(<span class="string">&quot;father click2&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">&quot;.son&quot;</span>).on(<span class="string">&quot;click.QQ&quot;</span>,<span class="function"><span class="title">funtcion</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      alert(<span class="string">&quot;son click1&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>利用trigger触发子元素带命名空间的事件，那么父元素带相同命名空间的事件也会被触发，二父元素没有命名空间不会被触发</p>
+<p>利用trigger触发子元素不带命名空间的事件，那么子元素和父元素所有相同类型的事件都会被触发</p>
+<h4 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h4><p>如果通过核心函数找到的元素不止一个，那么在添加事件的时候，jQuery会遍历所有找到的元素，并添加事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;ul&gt;li&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log($(<span class="built_in">this</span>).html());</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//委托ul对li进行事件委托</span></span><br><span class="line">$(<span class="string">&quot;ul&quot;</span>).delegate(<span class="string">&quot;li&quot;</span>,<span class="string">&quot;click&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log($(<span class="built_in">this</span>).html());</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>目前delegate被废弃</p>
+<p>使用<code>$(&quot;ul&quot;).on(&quot;click&quot;,&quot;li&quot;,function())&#123;&#125;</code></p>
+<p>练习</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">&quot;a&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $mask=$(</span><br><span class="line">           <span class="string">&quot;&lt;div class=\&quot;mask\&quot;&gt;</span></span><br><span class="line"><span class="string">      		  &lt;div class=\&quot;login\&quot;&gt;</span></span><br><span class="line"><span class="string">            	&lt;span&gt; &lt;/span&gt;</span></span><br><span class="line"><span class="string">       		  &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;);</span></span><br><span class="line"><span class="string">         $(&quot;</span>body<span class="string">&quot;).delegate(&quot;</span>.login&gt;span<span class="string">&quot;,&quot;</span>click<span class="string">&quot;,function()&#123;</span></span><br><span class="line"><span class="string">            alert(&quot;</span>span<span class="string">&quot;);</span></span><br><span class="line"><span class="string">        &#125;)</span></span><br><span class="line"><span class="string">        return false;</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">&#125;)</span></span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -500,6 +946,91 @@
 
 
   
+    <article id="post-基础算法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2021/01/18/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" class="article-date">
+      <time datetime="2021-01-17T16:00:00.000Z" itemprop="datePublished">2021-01-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2021/01/18/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">LeetCode</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="1-二分算法"><a href="#1-二分算法" class="headerlink" title="1.二分算法"></a>1.二分算法</h2><p>二分模板一共有两个，分别适用于不同情况。<br>算法思路：假设目标值在闭区间[l, r]中， 每次将区间长度缩小一半，当l = r时，我们就找到了目标值。</p>
+<h4 id="版本1"><a href="#版本1" class="headerlink" title="版本1"></a>版本1</h4><p>当我们将区间[l, r]划分成[l, mid]和[mid + 1, r]时，其更新操作是r = mid或者l = mid + 1;，计算mid时不需要加1。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bsearch_1</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (check(mid)) r = mid;</span><br><span class="line">        <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="版本2"><a href="#版本2" class="headerlink" title="版本2"></a>版本2</h4><p>当我们将区间[l, r]划分成[l, mid - 1]和[mid, r]时，其更新操作是r = mid - 1或者l = mid;，此时为了防止死循环，计算mid时需要加1。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bsearch_2</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = l + r + <span class="number">1</span> &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (check(mid)) l = mid;</span><br><span class="line">        <span class="keyword">else</span> r = mid - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="1-暴搜-（八皇后问题）"><a href="#1-暴搜-（八皇后问题）" class="headerlink" title="1.暴搜 （八皇后问题）"></a>1.暴搜 （八皇后问题）</h2><h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p>给定一个 N×NN×N 的棋盘，请你在上面放置 NN 个棋子，要求满足：</p>
+<ul>
+<li>每行每列都恰好有一个棋子</li>
+<li>每条对角线上都最多只能有一个棋子</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    1   2   3   4   5   6</span><br><span class="line">  -------------------------</span><br><span class="line">1 |   | O |   |   |   |   |</span><br><span class="line">  -------------------------</span><br><span class="line">2 |   |   |   | O |   |   |</span><br><span class="line">  -------------------------</span><br><span class="line">3 |   |   |   |   |   | O |</span><br><span class="line">  -------------------------</span><br><span class="line">4 | O |   |   |   |   |   |</span><br><span class="line">  -------------------------</span><br><span class="line">5 |   |   | O |   |   |   |</span><br><span class="line">  -------------------------</span><br><span class="line">6 |   |   |   |   | O |   |</span><br><span class="line">  -------------------------</span><br></pre></td></tr></table></figure>
+
+<p>上图给出了当 N=6N=6 时的一种解决方案，该方案可用序列 <code>2 4 6 1 3 5</code> 来描述，该序列按顺序给出了从第一行到第六行，每一行摆放的棋子所在的列的位置。</p>
+<p>请你编写一个程序，给定一个 N×NN×N 的棋盘以及 NN 个棋子，请你找出所有满足上述条件的棋子放置方案。</p>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>共一行，一个整数 NN。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>共四行，前三行每行输出一个整数序列，用来描述一种可行放置方案，序列中的第 ii 个数表示第 ii 行的棋子应该摆放的列的位置。</p>
+<p>这三行描述的方案应该是整数序列字典序排在第一、第二、第三的方案。</p>
+<p>第四行输出一个整数，表示可行放置方案的总数。</p>
+<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>6≤N≤13</p>
+<p>经典八皇后问题<br>暴搜做法（搜索树）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#define M 15</span><br><span class="line">using namespace std;</span><br><span class="line">int n,ans&#x3D;0;</span><br><span class="line">bool col[M],dg[M*2],udg[M*2];&#x2F;&#x2F;对角线和反对角线数量都在2*N-1</span><br><span class="line">int path[M];</span><br><span class="line"></span><br><span class="line">void dfs(int x)&#x2F;&#x2F;递归深搜</span><br><span class="line">&#123;</span><br><span class="line">    if (x &gt; n)&#x2F;&#x2F;深搜到底</span><br><span class="line">    &#123;</span><br><span class="line">        ans ++ ;&#x2F;&#x2F;前三输出</span><br><span class="line">        if (ans &lt;&#x3D; 3)</span><br><span class="line">        &#123;</span><br><span class="line">            for (int i &#x3D; 1; i &lt;&#x3D; n; i ++ )</span><br><span class="line">                cout &lt;&lt; path[i] &lt;&lt; &#39; &#39;;</span><br><span class="line">            cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (int y &#x3D; 1; y &lt;&#x3D; n; y ++ )</span><br><span class="line">        if (!col[y] &amp;&amp; !dg[x + y] &amp;&amp; !udg[x - y + n])&#x2F;&#x2F;对角线 y&#x3D;-x+b 反对角线 y&#x3D;x+b  （+n）增加偏移量省去判断越界</span><br><span class="line">        &#123;</span><br><span class="line">            path[x] &#x3D; y;</span><br><span class="line">            col[y] &#x3D; dg[x + y] &#x3D; udg[x - y + n] &#x3D; true;</span><br><span class="line">            dfs(x + 1);</span><br><span class="line">            col[y] &#x3D; dg[x + y] &#x3D; udg[x - y + n] &#x3D; false;&#x2F;&#x2F;回溯 还原现场</span><br><span class="line">            path[x] &#x3D; 0;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    dfs(1);</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" rel="tag">寒假每日一题</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-动态规划" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -572,91 +1103,6 @@
 <p>9、单调队列优化DP</p>
 <p>10、斜率优化DP</p>
 
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" rel="tag">寒假每日一题</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-基础算法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2021/01/18/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" class="article-date">
-      <time datetime="2021-01-17T16:00:00.000Z" itemprop="datePublished">2021-01-18</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2021/01/18/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">LeetCode</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="1-二分算法"><a href="#1-二分算法" class="headerlink" title="1.二分算法"></a>1.二分算法</h2><p>二分模板一共有两个，分别适用于不同情况。<br>算法思路：假设目标值在闭区间[l, r]中， 每次将区间长度缩小一半，当l = r时，我们就找到了目标值。</p>
-<h4 id="版本1"><a href="#版本1" class="headerlink" title="版本1"></a>版本1</h4><p>当我们将区间[l, r]划分成[l, mid]和[mid + 1, r]时，其更新操作是r = mid或者l = mid + 1;，计算mid时不需要加1。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bsearch_1</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (check(mid)) r = mid;</span><br><span class="line">        <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="版本2"><a href="#版本2" class="headerlink" title="版本2"></a>版本2</h4><p>当我们将区间[l, r]划分成[l, mid - 1]和[mid, r]时，其更新操作是r = mid - 1或者l = mid;，此时为了防止死循环，计算mid时需要加1。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bsearch_2</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = l + r + <span class="number">1</span> &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (check(mid)) l = mid;</span><br><span class="line">        <span class="keyword">else</span> r = mid - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="1-暴搜-（八皇后问题）"><a href="#1-暴搜-（八皇后问题）" class="headerlink" title="1.暴搜 （八皇后问题）"></a>1.暴搜 （八皇后问题）</h2><h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p>给定一个 N×NN×N 的棋盘，请你在上面放置 NN 个棋子，要求满足：</p>
-<ul>
-<li>每行每列都恰好有一个棋子</li>
-<li>每条对角线上都最多只能有一个棋子</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    1   2   3   4   5   6</span><br><span class="line">  -------------------------</span><br><span class="line">1 |   | O |   |   |   |   |</span><br><span class="line">  -------------------------</span><br><span class="line">2 |   |   |   | O |   |   |</span><br><span class="line">  -------------------------</span><br><span class="line">3 |   |   |   |   |   | O |</span><br><span class="line">  -------------------------</span><br><span class="line">4 | O |   |   |   |   |   |</span><br><span class="line">  -------------------------</span><br><span class="line">5 |   |   | O |   |   |   |</span><br><span class="line">  -------------------------</span><br><span class="line">6 |   |   |   |   | O |   |</span><br><span class="line">  -------------------------</span><br></pre></td></tr></table></figure>
-
-<p>上图给出了当 N=6N=6 时的一种解决方案，该方案可用序列 <code>2 4 6 1 3 5</code> 来描述，该序列按顺序给出了从第一行到第六行，每一行摆放的棋子所在的列的位置。</p>
-<p>请你编写一个程序，给定一个 N×NN×N 的棋盘以及 NN 个棋子，请你找出所有满足上述条件的棋子放置方案。</p>
-<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>共一行，一个整数 NN。</p>
-<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>共四行，前三行每行输出一个整数序列，用来描述一种可行放置方案，序列中的第 ii 个数表示第 ii 行的棋子应该摆放的列的位置。</p>
-<p>这三行描述的方案应该是整数序列字典序排在第一、第二、第三的方案。</p>
-<p>第四行输出一个整数，表示可行放置方案的总数。</p>
-<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>6≤N≤13</p>
-<p>经典八皇后问题<br>暴搜做法（搜索树）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#define M 15</span><br><span class="line">using namespace std;</span><br><span class="line">int n,ans&#x3D;0;</span><br><span class="line">bool col[M],dg[M*2],udg[M*2];&#x2F;&#x2F;对角线和反对角线数量都在2*N-1</span><br><span class="line">int path[M];</span><br><span class="line"></span><br><span class="line">void dfs(int x)&#x2F;&#x2F;递归深搜</span><br><span class="line">&#123;</span><br><span class="line">    if (x &gt; n)&#x2F;&#x2F;深搜到底</span><br><span class="line">    &#123;</span><br><span class="line">        ans ++ ;&#x2F;&#x2F;前三输出</span><br><span class="line">        if (ans &lt;&#x3D; 3)</span><br><span class="line">        &#123;</span><br><span class="line">            for (int i &#x3D; 1; i &lt;&#x3D; n; i ++ )</span><br><span class="line">                cout &lt;&lt; path[i] &lt;&lt; &#39; &#39;;</span><br><span class="line">            cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (int y &#x3D; 1; y &lt;&#x3D; n; y ++ )</span><br><span class="line">        if (!col[y] &amp;&amp; !dg[x + y] &amp;&amp; !udg[x - y + n])&#x2F;&#x2F;对角线 y&#x3D;-x+b 反对角线 y&#x3D;x+b  （+n）增加偏移量省去判断越界</span><br><span class="line">        &#123;</span><br><span class="line">            path[x] &#x3D; y;</span><br><span class="line">            col[y] &#x3D; dg[x + y] &#x3D; udg[x - y + n] &#x3D; true;</span><br><span class="line">            dfs(x + 1);</span><br><span class="line">            col[y] &#x3D; dg[x + y] &#x3D; udg[x - y + n] &#x3D; false;&#x2F;&#x2F;回溯 还原现场</span><br><span class="line">            path[x] &#x3D; 0;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    dfs(1);</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     

@@ -9,17 +9,17 @@
   
   <title>jquery | DQ BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基础知识点加载模式1.原生js和jQuery入口函数的加载模式不同 元素JS会等到DOM元素加载完毕，并且图片也加载完毕才会执行 jQuery会等到DOM元素加载完毕，但不会等到图片也加载完毕 2.如果原生JS编写了多个入口函数，后面编写的就会覆盖前面的 jQuery 中如果编写多个入口函数，后面的不会覆盖前面的 处理冲突1.释放$的使用权 注意点：释放操作必须编写在其他jQuery代码之前 ​">
+  <meta name="description" content="知识点 cookie ：会话跟踪技术 客户端 session ：会话跟踪技术 服务端 cookie作用： 将网页中的数据保存到浏览器中 cookie生命周期： 默认情况下生命周期是一次会话（浏览器被关闭） （1）如果是通过expires&#x3D;设置了过期时间，并且过期时间没有过期，那么下次打开浏览器还是存在 （2）如果是通过expires&#x3D;设置了过期时间，并且过期时间已经过期，那么会立即删除保存的数据">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jquery">
-<meta property="og:url" content="http://example.com/2021/01/18/Jquery/index.html">
+<meta property="og:url" content="http://example.com/2021/02/01/cookie/index.html">
 <meta property="og:site_name" content="DQ BLOG">
-<meta property="og:description" content="基础知识点加载模式1.原生js和jQuery入口函数的加载模式不同 元素JS会等到DOM元素加载完毕，并且图片也加载完毕才会执行 jQuery会等到DOM元素加载完毕，但不会等到图片也加载完毕 2.如果原生JS编写了多个入口函数，后面编写的就会覆盖前面的 jQuery 中如果编写多个入口函数，后面的不会覆盖前面的 处理冲突1.释放$的使用权 注意点：释放操作必须编写在其他jQuery代码之前 ​">
+<meta property="og:description" content="知识点 cookie ：会话跟踪技术 客户端 session ：会话跟踪技术 服务端 cookie作用： 将网页中的数据保存到浏览器中 cookie生命周期： 默认情况下生命周期是一次会话（浏览器被关闭） （1）如果是通过expires&#x3D;设置了过期时间，并且过期时间没有过期，那么下次打开浏览器还是存在 （2）如果是通过expires&#x3D;设置了过期时间，并且过期时间已经过期，那么会立即删除保存的数据">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-27T12:43:29.710Z">
+<meta property="article:published_time" content="2021-01-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-02-01T12:32:50.518Z">
 <meta property="article:author" content="Double Q">
-<meta property="article:tag" content="jquery">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="DQ BLOG" type="application/atom+xml">
@@ -191,7 +191,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/LeetCode/" style="font-size: 10px;">LeetCode</a> <a href="/tags/MYSQL/" style="font-size: 10px;">MYSQL</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" style="font-size: 20px;">寒假每日一题</a>
+                        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/LeetCode/" style="font-size: 10px;">LeetCode</a> <a href="/tags/MYSQL/" style="font-size: 10px;">MYSQL</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E5%AF%92%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" style="font-size: 20px;">寒假每日一题</a>
                     </div>
                 </section>
                 
@@ -258,11 +258,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Jquery" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-cookie" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2021/01/18/Jquery/" class="article-date">
-      <time datetime="2021-01-17T16:00:00.000Z" itemprop="datePublished">2021-01-18</time>
+      <a  href="/2021/02/01/cookie/" class="article-date">
+      <time datetime="2021-01-31T16:00:00.000Z" itemprop="datePublished">2021-02-01</time>
 </a>
 
     </div>
@@ -288,7 +288,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -298,102 +298,33 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="基础知识点"><a href="#基础知识点" class="headerlink" title="基础知识点"></a>基础知识点</h2><h4 id="加载模式"><a href="#加载模式" class="headerlink" title="加载模式"></a>加载模式</h4><p>1.原生js和jQuery入口函数的加载模式不同</p>
-<p>元素JS会等到DOM元素加载完毕，并且图片也加载完毕才会执行</p>
-<p>jQuery会等到DOM元素加载完毕，但不会等到图片也加载完毕</p>
-<p>2.如果原生JS编写了多个入口函数，后面编写的就会覆盖前面的</p>
-<p>jQuery 中如果编写多个入口函数，后面的不会覆盖前面的</p>
-<h4 id="处理冲突"><a href="#处理冲突" class="headerlink" title="处理冲突"></a>处理冲突</h4><p>1.释放$的使用权</p>
-<p>注意点：释放操作必须编写在其他jQuery代码之前</p>
-<p>​                释放之后就不能再使用￥，改为使用jQuery</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jQuery.noConflict();</span><br></pre></td></tr></table></figure>
-
-<p>2.自定义一个访问符号</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nj=jQuery.noConflict();</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="核心函数"><a href="#核心函数" class="headerlink" title="核心函数"></a>核心函数</h4><p>1.接收一个函数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>))</span>&#123;</span><br><span class="line">	alert(<span class="string">&quot;hello &quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2.接收一个字符串</p>
-<p>2.1接收一个字符串选择器</p>
-<p>返回一个jQuery对象，对象中保存了找到的DOM元素</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $box1=$(<span class="string">&quot;.box1&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> $box2=$(<span class="string">&quot;#box2&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>2.2接收一个字符串代码片段</p>
-<p>返回一个jQuery对象，对象中保存了找到的DOM元素</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $p=$(<span class="string">&quot;&lt;p&gt;我是段落&lt;/p&gt;&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>3.接收一个DOM元素</p>
-<p>会被包装成一个jQuery元素返回给我们</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> span=<span class="built_in">document</span>.getElementByTagName(<span class="string">&quot;span&quot;</span>)[<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+        <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p> cookie ：会话跟踪技术 客户端</p>
+<p>session ：会话跟踪技术 服务端</p>
+<p>cookie作用：</p>
+<p>将网页中的数据保存到浏览器中</p>
+<p>cookie生命周期：</p>
+<p>默认情况下生命周期是一次会话（浏览器被关闭）</p>
+<p>（1）如果是通过expires=设置了过期时间，并且过期时间没有过期，那么下次打开浏览器还是存在</p>
+<p>（2）如果是通过expires=设置了过期时间，并且过期时间已经过期，那么会立即删除保存的数据</p>
+<p>注意点：</p>
+<p>cookie默认不会博爱村任何数据</p>
+<p>cookie不能一次性设置多条数据，要想保存多条数据，只能一条一条设置</p>
+<p>cookie有大小和个数的限制</p>
+<p>个数限制：20~50</p>
+<p>大小限制：4KB左右</p>
+<p>cookie作用范围：</p>
+<p>同一个浏览器的同一个路径下访问</p>
+<p>如果在同一个浏览器中，默认情况下下一级路径可以访问</p>
+<p>如果说保存到了/jQuery/Ajax路径下，我们现在/jQuery/Ajax/xxxx，并且在/jQuery/</p>
+<p>例如：我们在<a target="_blank" rel="noopener" href="http://www.baidu.com下保存了一个cookie,那么我们在edu.baidu.com中是无法访问的/">www.baidu.com下保存了一个cookie，那么我们在edu.baidu.com中是无法访问的</a></p>
+<p>如果现在edu.baidu中也能访问，那么需要添加一句代码domian=baidu.com;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="built_in">document</span>.cookie);</span><br><span class="line"><span class="keyword">var</span> date=<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">data.setDate(date.getDate()-<span class="number">1</span>);</span><br><span class="line"><span class="built_in">document</span>.cookie= <span class="string">&quot;age=xx;expires=&quot;</span>+date.toGMTString()+<span class="string">&quot;;&quot;</span>;</span><br><span class="line">alert(<span class="built_in">document</span>.cookie);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.cookie=<span class="string">&quot;name=zs;path=/;domain=127.0.0.1;&quot;</span>;</span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="静态方法和实例方法"><a href="#静态方法和实例方法" class="headerlink" title="静态方法和实例方法"></a>静态方法和实例方法</h4><p>1.定义一个类</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Aclass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2.给这个类添加一个静态方法</p>
-<p>直接添加给类的就是静态方法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">AClass.staticMethod=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">&quot;staticMethod&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>静态方法通过类名调用</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AClass.staticMethod();</span><br></pre></td></tr></table></figure>
-
-<p>3.给这个类添加一个实例方法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">AClass.prototype.instamceMethod=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">&quot;instanceMethod&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>实例方法通过类的实例调用</p>
-<p>创建一个实例（创建一个对象）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="keyword">new</span> AClass();</span><br></pre></td></tr></table></figure>
-
-<p>通过实例调用实例方法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.instanceMethod();</span><br></pre></td></tr></table></figure>
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">document</span>.cookie=<span class="string">&quot;age=xx&quot;</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addCookie</span>(<span class="params">kry,value,day,path,domain</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//1.处理默认保存的路径</span></span><br><span class="line">        <span class="keyword">var</span> index=<span class="built_in">window</span>.location.pathname.lastIndexOf(<span class="string">&quot;/&quot;</span>);</span><br><span class="line">        <span class="keyword">var</span> currentPath=<span class="built_in">window</span>.location.pathname.silce(<span class="number">0</span>,index);</span><br><span class="line">        path=path||currentPath;</span><br><span class="line">        <span class="comment">//2.处理默认保存的domain</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">var</span> date=<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        date.setDate(date.getDate()-<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">document</span>.cookie=<span class="string">&quot;key=value;expores=&quot;</span>+date.toGMTString()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-
-<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><p>1.什么式jQuery对象？</p>
-<p>jQuery对象是一个伪数组</p>
-<p>2.什么是伪数组？</p>
-<p>有0到length-1的属性，并且有length属性</p>
-<h4 id="属性和属性节点"><a href="#属性和属性节点" class="headerlink" title="属性和属性节点"></a>属性和属性节点</h4><p>1.什么是属性？</p>
-<p>对象身上保存的变量就是属性</p>
-<p>2.如何操作属性？</p>
-<p>对象.属性名称=值；</p>
-<p>对象.属性名称；</p>
-<p>对象[“属性名称”]=值；</p>
-<p>对象[“属性名称”]；</p>
-<p>3.什么是属性节点？</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span name=<span class="string">&quot;it_0526&quot;</span>&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
-
-<p>再编写HTML代码时，再HTML标签中添加的属性就是属性节点</p>
-<p>再浏览器中找到span这个DOM元素之后，展开看到的都是属性</p>
-<p>再attributes属性中保持所有内容的都是属性节点</p>
-<p>4.如何操作属性节点？</p>
-<p>DOM元素.setAttributr(“属性名称”，“值”)；</p>
-<p>DOM元素.getAttribute(“属性名称”)；</p>
-<p>5.属性和属性节点有什么区别？</p>
-<p>任何对象都有属性，但是只有DOM对象才有属性节点</p>
-<h4 id="内容选择器"><a href="#内容选择器" class="headerlink" title="内容选择器"></a>内容选择器</h4><p>：empty 作用：找到既没有文本内容也没有子元素的指定元素</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $div=$(<span class="string">&quot;div:empty&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>：empty 作用：找到有文本内容或有子元素的指定元素</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $div=$(<span class="string">&quot;div:parent&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>：contains 作用：找到包含指定文本内容的指定元素</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $div=$(<span class="string">&quot;div:contains（‘我是div’)&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>：has(selector) 作用：找到有子元素的指定元素</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $div=$(<span class="string">&quot;div:has（‘span’)&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h2 id="方法掌握"><a href="#方法掌握" class="headerlink" title="方法掌握"></a>方法掌握</h2>
       
     </div>
     
@@ -401,13 +332,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2021/01/18/Jquery/">jquery</a></p>
+        <p><span>本文标题:</span><a  href="/2021/02/01/cookie/">jquery</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问  的个人博客"></a></p>
-        <p><span>发布时间:</span>2021年01月18日 - 00时00分</p>
-        <p><span>最后更新:</span>2021年01月27日 - 20时43分</p>
+        <p><span>发布时间:</span>2021年02月01日 - 00时00分</p>
+        <p><span>最后更新:</span>2021年02月01日 - 20时32分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2021/01/18/Jquery/" title="jquery">http://example.com/2021/01/18/Jquery/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://example.com/2021/01/18/Jquery/　　作者: " title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2021/02/01/cookie/" title="jquery">http://example.com/2021/02/01/cookie/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://example.com/2021/02/01/cookie/　　作者: " title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -419,8 +350,8 @@
 <nav id="article-nav">
   
   
-    <a  href="/2021/01/18/Leetcode/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LeetCode</div>
+    <a  href="/2021/01/29/%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -432,7 +363,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">基础知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.0.1.</span> <span class="toc-text">加载模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E5%86%B2%E7%AA%81"><span class="toc-number">1.0.2.</span> <span class="toc-text">处理冲突</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.3.</span> <span class="toc-text">核心函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%92%8C%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.4.</span> <span class="toc-text">静态方法和实例方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.0.5.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E5%92%8C%E5%B1%9E%E6%80%A7%E8%8A%82%E7%82%B9"><span class="toc-number">1.0.6.</span> <span class="toc-text">属性和属性节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.0.7.</span> <span class="toc-text">内容选择器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E6%8E%8C%E6%8F%A1"><span class="toc-number">2.</span> <span class="toc-text">方法掌握</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">封装</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -509,12 +440,12 @@
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2021/01/18/Leetcode/" title="下一篇: LeetCode">
+            <a  href="/2021/01/29/%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/" title="下一篇: ">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/Jquery/">jquery</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/Leetcode/">LeetCode</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">LeetCode</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">贪心算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/Mysql%20%E5%9F%BA%E7%A1%80/">MYSQL基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/11/09/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/02/01/cookie/">jquery</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/29/%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/">前端优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/26/Ajax/">Ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/20/JQuery/">jquery</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/Leetcode/">LeetCode</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">LeetCode</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">贪心算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/18/Mysql%20%E5%9F%BA%E7%A1%80/">MYSQL基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/11/09/hello-world/">Hello World</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
